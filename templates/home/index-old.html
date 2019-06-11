@@ -1,0 +1,59 @@
+{{define "content"}}
+<header>
+    {{template "carousel" .}}
+</header>
+
+<div class="container">
+    <!-- Portfolio Section -->
+    <h2>News</h2>
+
+    <div class="row">
+    {{ range  .posts}}
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="public{{.MainImage.URL "post_preview"}}" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="/posts/{{.Slug}}">{{.Title}}</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    {{end}}
+    </div>
+    <!-- /.row -->
+
+    <!-- Features Section -->
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Featured Event</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id
+                reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia
+                dolorum </p>
+            <ul>
+                <li>Quisquam totam aspernatur tempora</li>
+                <li>Consectetur adipisicing elit</li>
+                <li>Minima unde aliquid ea culpa sunt</li>
+                <li>Corporis, omnis doloremque non cum id</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <img class="img-fluid rounded" src="/assets/images/placeholders/featuredimg01.jpg" alt="">
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti
+                beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+        </div>
+    </div>
+</div>
+{{ end}}

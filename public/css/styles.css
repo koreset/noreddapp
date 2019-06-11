@@ -1,0 +1,181 @@
+.header-logo {
+  width: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-logo {
+  width: 60px;
+}
+
+.nav-button {
+  border: none;
+  padding: 5px;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: flex-end;
+  padding: .5rem 1rem;
+  color: white;
+}
+
+.navbar > .container, .navbar > .container-fluid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: flex-end;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav.navbar-nav.mx-auto {
+  color: white;
+}
+
+.nav-item {
+  color: white;
+}
+
+#header-intro {
+  height: 75vh;
+  background: url(/public/images/deforestation02.jpg);
+}
+
+#logo-title {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-dark .navbar-brand {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #logo-title {
+    display: block;
+  }
+}
+
+#top-header {
+  background-color: rgba(18,18,18,0.8);
+}
+
+#logo-title .h5, h5 {
+  color: white;
+}
+
+.home-about-img {
+  width: 400px;
+  height: auto;
+}
+
+#about-div {
+  background-color: grey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.about-image {
+  max-width: 450px;
+  object-fit: cover;
+}
+
+#about-div-inner {
+  width: 400px;
+  height: 400px;
+}
+
+#recent-news {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section-pad {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#about-us {
+  background-color: #370c0c;
+  color: white;
+}
+
+#about-us .img-fluid {
+  border-radius: 3rem;
+}
+
+body {
+  font-family: 'Arvo', serif;
+}
+
+p.copyright {
+  font-size: 0.2rem;
+}
+
+#recent-news .d-block {
+  border-bottom: 1px solid black;
+  margin-bottom: 1.5rem;
+}
+
+.small-text {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+a:hover {
+  color: #656262;
+  text-decoration: underline;
+}
+
+.card-link {
+  color: #370c0c;
+}
+
+p.article-subtitle {
+  font-size: 0.8rem;
+}
+
+.d-block.img-fluid.article-img {
+  object-fit: fill;
+}
+
+#article-img-div {
+  width: 100%;
+}
+
+.article-img {
+  object-fit: fill;
+}
+

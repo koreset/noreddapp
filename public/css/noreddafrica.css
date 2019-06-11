@@ -1,0 +1,50 @@
+body {
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Arvo', Serif, Arial;
+}
+
+p {
+    font-family: 'Open Sans', Serif;
+    font-weight: 300;
+}
+
+a {
+    color: #640000;
+}
+
+.noredd-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.bg-dark-navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+#navbarResponsive > ul > li > a {
+    color: #ffffff;
+}
+
+#navbarResponsive > ul > li > a:hover {
+    color: #ffffff;
+}
+
+.container-news {
+    margin-top: 100px;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
