@@ -2,9 +2,10 @@ package posts
 
 import (
 	"time"
-	"github.com/qor/media/media_library"
+
 	"github.com/gosimple/slug"
 	"github.com/qor/media"
+	"github.com/qor/media/media_library"
 )
 
 type Post struct {
@@ -15,8 +16,10 @@ type Post struct {
 	Slug         string                            `json:"slug" db:"slug"`
 	Body         string                            `json:"body" db:"body"`
 	Published    bool                              `json:"published" db:"published"`
-	MainImageUrl string                            `json:"main_image_url" db:"main_image_url"`
+	PublishDate  time.Time                         `json:"publish_date" db:"publish_date"`
+	MainImageURL string                            `json:"main_image_url" db:"main_image_url"`
 	MainImage    media_library.MediaLibraryStorage `gorm:"type:text" sql:"size:4294967295;" media_library:"url:/content/{{class}}/{{primary_key}}/{{column}}.{{extension}};path:./assets"`
+	Type         string                            `json:"post_type" db:"post_type"`
 }
 
 func (p *Post) GetSizes() map[string]*media.Size {

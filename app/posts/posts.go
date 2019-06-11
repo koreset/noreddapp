@@ -31,7 +31,7 @@ func (app App) ConfigureApplication(application *application.Application) {
 func (app App) ConfigureAdmin(Admin *admin.Admin) {
 	assetManager := Admin.AddResource(&asset_manager.AssetManager{}, &admin.Config{Invisible: true})
 	post := Admin.AddResource(&posts.Post{}, &admin.Config{Menu: []string{"Posts Management"}})
-	post.IndexAttrs("Title", "Published")
+	post.IndexAttrs("Title", "Published", "PublishDate")
 	post.Meta(&admin.Meta{Name: "Body", Config: &admin.RichEditorConfig{AssetManager: assetManager}})
 	//post.Meta(&admin.Meta{Name:"Body", Config:&admin.RichEditorConfig{}, Type:"rich_editor"})
 	//post.AddProcessor(&resource.Processor{
