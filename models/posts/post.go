@@ -1,6 +1,7 @@
 package posts
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/gosimple/slug"
@@ -34,10 +35,14 @@ func (p *Post) GetSizes() map[string]*media.Size {
 
 func (p *Post) BeforeCreate() (err error) {
 
+	fmt.Println("++++++++ BeforeCreate Started")
+
 	p.Slug = createUniqueSlug(p.Title)
 	p.MainImage.Sizes = p.GetSizes()
 	file, _ := p.MainImage.Base.FileHeader.Open()
 	p.MainImage.Scan(file)
+
+	fmt.Println("++++++++ BeforeCreate Completed")
 
 	//for i := range p.Images {
 	//	p.Images[i].File.Sizes = p.Images[i].GetSizes()

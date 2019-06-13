@@ -1,18 +1,23 @@
 package application
 
 import (
-	"github.com/jinzhu/gorm"
-	"github.com/qor/admin"
-	"github.com/gin-gonic/gin"
-	"github.com/koreset/noredd-app/config/db"
-	"github.com/qor/publish2"
-	"github.com/koreset/noredd-app/utils/eztemplate"
+	"fmt"
 	"html/template"
 	"os"
-	"fmt"
+
+	"github.com/qor/media/asset_manager"
+	"github.com/qor/media/media_library"
+
 	"github.com/Masterminds/sprig"
-	"github.com/koreset/noredd-app/utils"
+	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
 	"github.com/koreset/gtf"
+	"github.com/koreset/noredd-app/config/bindatafs"
+	"github.com/koreset/noredd-app/config/db"
+	"github.com/koreset/noredd-app/utils"
+	"github.com/koreset/noredd-app/utils/eztemplate"
+	"github.com/qor/admin"
+	"github.com/qor/publish2"
 )
 
 type AppModuleInterface interface {
@@ -38,6 +43,10 @@ func New() *Application {
 			DB:       db.DB.Set(publish2.VisibleMode, publish2.ModeOff).Set(publish2.ScheduleMode, publish2.ModeOff),
 		}),
 	}
+	config.Admin.SetAssetFS(bindatafs.AssetFS.NameSpace("admin"))
+	config.Admin.AddResource(&asset_manager.AssetManager{}, &admin.Config{Invisible: true})
+	config.Admin.AddResource(&media_library.MediaLibrary{}, &admin.Config{Menu: []string{"Site Management"}})
+
 	application := &Application{
 		config,
 	}
@@ -68,7 +77,6 @@ func configureRouter() *gin.Engine {
 	return router
 
 }
-
 
 func setupTemplateFuncs() template.FuncMap {
 	funcMaps := sprig.FuncMap()

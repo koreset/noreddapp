@@ -1,24 +1,6 @@
-{{define "header-nav"}}
+{{define "header-intro"}}
 <!-- Navigation -->
     <section id="header-intro">
-        <header class="text-center" id="top-header">
-            <div id="logo-title"><a class="d-block" href="/index.html"><img class="header-logo" src="/assets/img/no-redd-logo1.png"></a>
-                <h5>No REDD in Africa Network</h5>
-            </div>
-            <nav class="navbar navbar-dark navbar-expand-md">
-                <div class="container-fluid"><a class="navbar-brand" href="/index.html"><img class="nav-logo" src="/assets/img/no-redd-logo1.png"></a><button data-toggle="collapse" class="navbar-toggler nav-button" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div
-                            class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav mx-auto">
-                            <li class="nav-item" role="presentation"><a class="nav-link active text-white" href="/news.html">News</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#">Who We Are</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#">Resources</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#">Events</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        {{template "nav-header" .}}
     </section>
 {{end}}

@@ -1,4 +1,7 @@
 {{define "content"}}
+    <section id="header-intro">
+        {{template "nav-header" .}}
+    </section>
     <section id="about-us" class="container-fluid section-pad">
         <div class="container">
             <div class="row align-items-center">
@@ -15,10 +18,10 @@
         <h4 class="d-block">News</h4>
         <div class="row">
             {{range .posts}}
-                <div class="col col-md-6 col-sm-12 col-12 col-lg-4">
+                <div class="article-card col col-md-6 col-sm-12 col-12 col-lg-4">
                     <div class="card h-100"><a href="#"><img class="card-img-top" src="public{{ .MainImage.URL "post_preview" }}"></a>
                         <div class="card-body">
-                            <a class="card-link" href="/post.html">
+                            <a class="card-link" href="/posts/{{ .Slug}}">
                                 <h4>{{ .Title }}</h4>
                             </a>
                             <p class="small-text">{{.PublishDate | displayDateString }} - {{.Type}}</p>
@@ -27,39 +30,6 @@
                     </div>
                 </div>
             {{end}}
-            <div class="col col-md-6 col-sm-12 col-12 col-lg-4">
-                <div class="card h-100"><a href="#"><img class="card-img-top" src="/assets/img/placeimg06.jpg"></a>
-                    <div class="card-body">
-                        <a class="card-link" href="/post.html">
-                            <h4>Donec id purus tincidunt viverra</h4>
-                        </a>
-                        <p class="small-text">28 April 2019 - News</p>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-6 col-sm-12 col-12 col-lg-4">
-                <div class="card h-100"><a href="#"><img class="card-img-top" src="/assets/img/placeimg02.jpg"></a>
-                    <div class="card-body">
-                        <a class="card-link" href="/post.html">
-                            <h4>Nunc mattis tincidunt massa ut<br></h4>
-                        </a>
-                        <p class="small-text">13 Feb 2019 - Publication</p>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-md-6 col-sm-12 col-12 col-lg-4">
-                <div class="card h-100"><a href="#"><img class="card-img-top" src="/assets/img/placeimg05.jpg"></a>
-                    <div class="card-body">
-                        <a class="card-link" href="/post.html">
-                            <h4>Nullam gravida purus et velit.<br></h4>
-                        </a>
-                        <p class="small-text">2 October 2018 - Press Release</p>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 {{end}}
