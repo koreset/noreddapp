@@ -1,18 +1,25 @@
 package posts
 
 import (
-	"github.com/gin-gonic/gin"
+	"fmt"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 	"github.com/koreset/noredd-app/config/db"
 	posts2 "github.com/koreset/noredd-app/models/posts"
-	"fmt"
 )
 
 type Controller struct {
 }
 
 func (ctrl Controller) Index(c *gin.Context) {
-	c.HTML(200, "posts/index", nil)
+	var posts []posts2.Post
+	err := db.GetDB().Order("publish_date DESC").Find(&posts).Error
+	if err != nil {
+		//Redirect to 404 page
+	}
+
+	c.HTML(200, "posts/index", gin.H{"posts": posts})
 }
 
 func (ctrl Controller) GetPost(c *gin.Context) {

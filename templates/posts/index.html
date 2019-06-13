@@ -4,42 +4,17 @@
         <div class="row inner-body-content">
             <div class="col col-md-8 col-12">
                 <div class="container-fluid news-items-list">
-                    <div class="row align-items-center news-item">
-                        <div class="col col-md-5"><img class="img-fluid" src="/assets/img/placeimg03.jpg"></div>
-                        <div class="col col-md-7">
-                            <h4>Integer a purus et erat fringilla vulputate&nbsp;</h4>
-                            <p class="date-created">28 April 2019</p>
-                            <p>Aenean tristique varius suscipit. Etiam suscipit, sem et congue bibendum, nulla ex molestie arcu, quis convallis lorem enim id lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer a purus et erat fringilla
-                                vulputate a id ex.&nbsp;</p>
+                    {{range .posts}}
+                        <div class="row align-items-center news-item">
+                            <div class="col col-md-5"><img class="img-fluid" src="public{{ .MainImage.URL "post_preview" }}"></div>
+                            <div class="col col-md-7">
+                                <a class="card-link" href="/posts/{{.Slug}}"><h4>{{.Title}}</h4></a>
+                                <p class="date-created">{{.PublishDate | displayDateString }}</p>
+                                <p>Aenean tristique varius suscipit. Etiam suscipit, sem et congue bibendum, nulla ex molestie arcu, quis convallis lorem enim id lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer a purus et erat fringilla
+                                    vulputate a id ex.&nbsp;</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row align-items-center news-item">
-                        <div class="col col-md-5"><img class="img-fluid" src="/assets/img/placeimg03.jpg"></div>
-                        <div class="col col-md-7">
-                            <h4>Integer a purus et erat fringilla vulputate&nbsp;</h4>
-                            <p class="date-created">28 April 2019</p>
-                            <p>Aenean tristique varius suscipit. Etiam suscipit, sem et congue bibendum, nulla ex molestie arcu, quis convallis lorem enim id lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer a purus et erat fringilla
-                                vulputate a id ex.&nbsp;</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center news-item">
-                        <div class="col col-md-5"><img class="img-fluid" src="/assets/img/placeimg03.jpg"></div>
-                        <div class="col col-md-7">
-                            <h4>Integer a purus et erat fringilla vulputate&nbsp;</h4>
-                            <p class="date-created">28 April 2019</p>
-                            <p>Aenean tristique varius suscipit. Etiam suscipit, sem et congue bibendum, nulla ex molestie arcu, quis convallis lorem enim id lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer a purus et erat fringilla
-                                vulputate a id ex.&nbsp;</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center news-item">
-                        <div class="col col-md-5"><img class="img-fluid" src="/assets/img/placeimg03.jpg"></div>
-                        <div class="col col-md-7">
-                            <h4>Integer a purus et erat fringilla vulputate&nbsp;</h4>
-                            <p class="date-created">28 April 2019</p>
-                            <p>Aenean tristique varius suscipit. Etiam suscipit, sem et congue bibendum, nulla ex molestie arcu, quis convallis lorem enim id lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer a purus et erat fringilla
-                                vulputate a id ex.&nbsp;</p>
-                        </div>
-                    </div>
+                    {{ end }}                   
                 </div>
             </div>
             <div class="col col-md-4 col-12">
