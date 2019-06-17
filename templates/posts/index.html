@@ -7,8 +7,8 @@
                 <div class="container-fluid news-items-list">
                     {{range .posts}}
                         <div class="row align-items-center news-item">
-                            <div class="col col-md-5"><img class="img-fluid" src="public{{ .MainImage.URL "post_preview" }}"></div>
-                            <div class="col col-md-7">
+                            <div class="col-12 col-md-5"><a href="/posts/{{.Slug}}"><img class="img-fluid" src="public{{ .MainImage.URL "post_preview" }}"></a></div>
+                            <div class="col-12 col-md-7">
                                 <a class="card-link" href="/posts/{{.Slug}}"><h4>{{.Title}}</h4></a>
                                 <p class="date-created">{{.PublishDate | displayDateString }}</p>
                                 <p>Aenean tristique varius suscipit. Etiam suscipit, sem et congue bibendum, nulla ex molestie arcu, quis convallis lorem enim id lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer a purus et erat fringilla

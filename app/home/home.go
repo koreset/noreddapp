@@ -21,5 +21,6 @@ func (app App) ConfigureApplication(application *application.Application) {
 	application.Router.GET("/", controller.Index)
 	application.Router.GET("/show", controller.Show)
 	application.Router.GET("/about", controller.About)
+	application.Router.NoRoute(controller.NotFound)
 
 }

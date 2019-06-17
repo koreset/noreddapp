@@ -56,3 +56,7 @@ func (ctrl Controller) Show(c *gin.Context) {
 func (ctrl Controller) About(c *gin.Context) {
 	c.HTML(200, "home/about", nil)
 }
+
+func (ctrl Controller) NotFound(c *gin.Context) {
+	c.HTML(200, "home/404", nil)
+}
