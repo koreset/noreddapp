@@ -2,7 +2,8 @@
     {{ template "nav-header" .}}
     <section class="container">
         <div class="row inner-body-content">
-            <div class="col col-md-8 col-12">
+            <div class="col col-md-12 col-12">
+                <h1 class="newslist-title">News</h1>
                 <div class="container-fluid news-items-list">
                     {{range .posts}}
                         <div class="row align-items-center news-item">
@@ -15,29 +16,6 @@
                             </div>
                         </div>
                     {{ end }}                   
-                </div>
-            </div>
-            <div class="col col-md-4 col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><a class="card-link" href="#">Link</a><a class="card-link"
-                            href="#">Link</a></div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><a class="card-link" href="#">Link</a><a class="card-link"
-                            href="#">Link</a></div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><a class="card-link" href="#">Link</a><a class="card-link"
-                            href="#">Link</a></div>
                 </div>
             </div>
         </div>

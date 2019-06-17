@@ -20,5 +20,6 @@ func (app App) ConfigureApplication(application *application.Application) {
 	controller := &Controller{}
 	application.Router.GET("/", controller.Index)
 	application.Router.GET("/show", controller.Show)
+	application.Router.GET("/about", controller.About)
 
 }

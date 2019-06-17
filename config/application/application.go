@@ -55,7 +55,7 @@ func New() *Application {
 }
 
 func (application *Application) Serve() {
-	application.Router.Run(":5000")
+	application.Router.Run("0.0.0.0:5000")
 }
 
 func (application *Application) Use(app AppModuleInterface) {

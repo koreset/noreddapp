@@ -73,20 +73,14 @@
   background-size: cover;
 }
 
+#header-about {
+  height: 75vh;
+  background: url(/assets/img/noredd-about.jpg);
+  background-size: cover;
+}
+
 #logo-title {
   display: none;
-}
-
-@media (min-width: 768px) {
-  .navbar-dark .navbar-brand {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  #logo-title {
-    display: block;
-  }
 }
 
 #top-header {
@@ -124,8 +118,8 @@
 }
 
 .section-pad {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #about-us {
@@ -134,7 +128,7 @@
 }
 
 #about-us .img-fluid {
-  border-radius: 3rem;
+  border-radius: 10px;
 }
 
 body {
@@ -192,3 +186,41 @@ p.article-subtitle {
   margin-bottom: 2rem;
 }
 
+section.about-us h1, section.about-us h3{
+  display: block;
+  text-align: center;
+}
+
+.news-item {
+  margin-bottom: 1.5rem;
+}
+
+.news-items-list {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.newslist-title{
+  display:block;
+  border-bottom: 1px solid black;
+}
+
+p.nran-intro{
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-dark .navbar-brand {
+    display: none;
+  }
+  #logo-title {
+    display: block;
+  }
+}
+
+@media (max-width:767px){
+  #header-intro {
+    height: 50vh;
+  }
+}

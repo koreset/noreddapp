@@ -40,7 +40,7 @@ func (ctrl Controller) Index(c *gin.Context) {
 		},
 	}
 	var posts []posts2.Post
-	err := db.GetDB().Find(&posts).Error
+	err := db.GetDB().Order("publish_date desc").Find(&posts).Error
 	if err != nil {
 		//TODO: Do something there
 		fmt.Println(errors.WithStack(err))
@@ -51,4 +51,8 @@ func (ctrl Controller) Index(c *gin.Context) {
 
 func (ctrl Controller) Show(c *gin.Context) {
 	c.HTML(200, "home/show", nil)
+}
+
+func (ctrl Controller) About(c *gin.Context) {
+	c.HTML(200, "home/about", nil)
 }

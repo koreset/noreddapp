@@ -65,6 +65,14 @@
   opacity: 0.9;
 }
 
+.footer-clean .copyright {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+
 @media (max-width:991px) {
   .footer-clean .item.social > a {
     margin-top: 40px;
@@ -77,10 +85,4 @@
   }
 }
 
-.footer-clean .copyright {
-  margin-top: 14px;
-  margin-bottom: 0;
-  font-size: 13px;
-  opacity: 0.6;
-}
 

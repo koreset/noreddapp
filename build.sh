@@ -6,7 +6,7 @@ echo "===== Generating assets file ======="
 
 env GOOS=linux GOARCH=amd64 go build -tags 'bindatafs' -o noredd-app
 
-rsync -azP public/ root@104.248.255.136:/home/noredd-app/public/
+# rsync -azP public/ root@104.248.255.136:/home/noredd-app/public/
 rsync -azP assets/ root@104.248.255.136:/home/noredd-app/assets/
 rsync -azP templates/ root@104.248.255.136:/home/noredd-app/templates/
 
